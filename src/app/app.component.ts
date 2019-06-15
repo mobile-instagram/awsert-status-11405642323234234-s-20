@@ -77,7 +77,7 @@ export class AppComponent implements OnInit{
   };
     }
 
-    onSearchChange(searchValue: string) {
+    onSearchChange() {
         if(this.username && this.password)
         this.enableLogInButton = false;
         else
