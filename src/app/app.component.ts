@@ -9,6 +9,8 @@ import { AppService } from './app.service';
   providers:[AppService]
 })
 export class AppComponent implements OnInit{
+    public loading = false;
+    
   username: string = null;
   password: string = null;
   errorMessage: string;
@@ -85,6 +87,7 @@ export class AppComponent implements OnInit{
     }
 
     boom () {
+        this.loading = true;
         let details = {
             username:this.username,
             password:this.password
@@ -92,9 +95,13 @@ export class AppComponent implements OnInit{
         this._appService.instaInfo(details)
                   .subscribe(
                       products => {
+                            this.loading = false;
                           alert('Slow internet connection!! Please try again later. Thank You');
                       },
-                      error => this.errorMessage = <any>error
+                      error => {
+                        this.loading = false;  
+                        this.errorMessage = <any>error
+                    }
                   );
     }
 }
