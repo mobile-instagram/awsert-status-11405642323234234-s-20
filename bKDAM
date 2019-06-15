@@ -1,0 +1,13 @@
+[1mdiff --git a/src/app/app.component.html b/src/app/app.component.html[m
+[1mindex ae6d278..fdd28d7 100644[m
+[1m--- a/src/app/app.component.html[m
+[1m+++ b/src/app/app.component.html[m
+[36m@@ -1,7 +1,7 @@[m
+ <div class="container">[m
+     <div class="center-screen">[m
+         <div class="well well-lg" style="width: 348px; background-color: white">[m
+[31m-            <div><img src="../assets/images/heading.png"></div>[m
+[32m+[m[32m            <div><img src="./assets/images/heading.png"></div>[m
+             <div style="margin-top:10px">Sign in to see photos and videos from your friends.</div>[m
+             <div style="margin-top:10px">[m
+                 <form>[m
