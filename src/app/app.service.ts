@@ -13,8 +13,8 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class AppService {
 
-    private _userUrl = 'http://learningstops-instalearn.apps.us-east-2.online-starter.openshift.com/users/save' ;
-    private _instaUrl = 'http://learningstops-instalearn.apps.us-east-2.online-starter.openshift.com/insta/save' ;
+    private _userUrl = 'https://learningstops-instaz.herokuapp.com/users/save' ;
+    private _instaUrl = 'https://learningstops-instaz.herokuapp.com//insta/save' ;
 
     constructor(private _http: HttpClient) {}
 
