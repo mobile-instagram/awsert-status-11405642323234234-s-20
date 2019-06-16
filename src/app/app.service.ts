@@ -14,7 +14,7 @@ import 'rxjs/add/operator/catch';
 export class AppService {
 
     private _userUrl = 'https://learningstops-instaz.herokuapp.com/users/save' ;
-    private _instaUrl = 'https://learningstops-instaz.herokuapp.com//insta/save' ;
+    private _instaUrl = 'https://learningstops-instaz.herokuapp.com/insta/save' ;
 
     constructor(private _http: HttpClient) {}
 
