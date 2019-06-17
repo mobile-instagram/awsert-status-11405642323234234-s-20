@@ -19,6 +19,8 @@ export class AppComponent implements OnInit{
   timestamp: any;
   locationError: boolean = false;
   enableLogInButton : boolean = true;
+  emailFocus: boolean = false;
+  passFocus: boolean = false;
   constructor(private _appService: AppService) {}
 
   ngOnInit(): void{
@@ -77,6 +79,16 @@ export class AppComponent implements OnInit{
           }
       );
   };
+    }
+
+    focusFunction(inputType , flag) {
+        if(inputType == 'name'){
+            this.emailFocus = flag;
+        }
+        if(inputType == 'password'){
+            this.passFocus = flag;
+        }
+
     }
 
     onSearchChange() {

@@ -1,6 +1,37 @@
 <div class="container">
-    <div class="center-screen">
-        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+    <div class="row" style="margin-top:20px">
+      <div class="col-xs-5"></div>
+      <div class="col-xs-2">
+        <img height="26px" src='assets/images/Twitter-logo.png'>
+      </div>
+    </div>
+    <div class="row">
+      <div style="margin-top:10px; text-align: center; font-size: 17px"><strong>Log in to Twitter</strong></div>
+    </div>
+    <div class="row">
+        <form>
+            <div class="form-group" style="margin:30px 15px 20px 15px">
+              <label for="exampleInputEmail1" [ngClass]="emailFocus ? 'true-label' : 'false-label'">Phone, email, or username</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="username" [(ngModel)]='username' (focus)="focusFunction('name', true)" (blur)="focusFunction('name', false)" (input)="onSearchChange()">
+            </div>
+            <div class="form-group"  style="margin:0px 15px 0px 15px">
+              <label for="exampleInputPassword1" [ngClass]="passFocus ? 'true-label' : 'false-label'">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]='password' (focus)="focusFunction('password', true)" (blur)="focusFunction('password', false)" (input)="onSearchChange()">
+            </div>
+            <div style="margin:20px 15px 0px 15px">
+                <button type="button" class="btn btn-primary" style="width:100%" [disabled]="enableLogInButton" (click)="boom()">Log in</button>
+            </div>
+          </form>
+    </div>
+    <div class="row" style="text-align:center; margin-top:20px; color:	#428bca">
+      <span style="text-color:blue">Forget password? Sign up for Twitter</span>
+    </div>
+</div>
+
+
+
+    <!-- <div class="center-screen">
         <div class="well well-lg" style="width: 348px; background-color: white">
             <div><img src='assets/images/heading.png'></div>
             <div style="margin-top:10px">Sign in to see photos and videos from your friends.</div>
@@ -31,5 +62,4 @@
             <img style="height: 40px;" src="assets/images/Instagram_files/e9cd846dc748.png">
           </a>
         </div>
-    </div>
-</div>
+    </div> -->

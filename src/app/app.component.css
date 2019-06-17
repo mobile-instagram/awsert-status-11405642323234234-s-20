@@ -1,12 +1,23 @@
-.center-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+
+  input {
+    outline: 0;
+    border-width: 0 0 1.5px;
+    border-color: grey
   }
 
-  ul#menu li {
-    display:inline;
+  .false-label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .true-label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: lighter;
+    color:#428bca
   }
